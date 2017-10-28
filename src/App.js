@@ -18,6 +18,7 @@ class App extends Component {
     return (
       <div className="App container-fluid">
         <Route path="/login" exact component={PageShell(Login)}></Route>
+        <Route path="/" exact component={PageShell(Login)}></Route>
         <Route path="/family" exact component={PageShell(FamilyPage)}></Route>
       </div>
     );
