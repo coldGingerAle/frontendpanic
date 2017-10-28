@@ -8,6 +8,7 @@ import PageShell from './components/PageShell'
 import Header from './components/Header/Header';
 import {Family} from './components/Family/Family';
 import FamilyPage from './pages/FamilyPage';
+import Login from './pages/Login';
 
 class App extends Component {
   constructor(props) {
@@ -15,7 +16,8 @@ class App extends Component {
   }
   render() {
     return (
-      <div className="App container">
+      <div className="App container-fluid">
+        <Route path="/login" exact component={PageShell(Login)}></Route>
         <Route path="/family" exact component={PageShell(FamilyPage)}></Route>
       </div>
     );
