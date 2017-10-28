@@ -5,13 +5,18 @@ import Subscribe from './pages/Subscribe'
 import ThankYou from './pages/ThankYou'
 import ThirdPage from './pages/ThirdPage'
 import PageShell from './components/PageShell'
+import Header from './components/Header/Header';
+import {Family} from './components/Family/Family';
+import FamilyPage from './pages/FamilyPage';
+
 class App extends Component {
+  constructor(props) {
+    super(props);
+  }
   render() {
     return (
-      <div className="App">
-        <Route path="/" exact component={PageShell(Subscribe)}></Route>
-        <Route path="/thanks" exact component={PageShell(ThankYou)}></Route>
-        <Route path="/thirdpage" exact component={PageShell(ThirdPage)}></Route>
+      <div className="App container">
+        <Route path="/family" exact component={PageShell(FamilyPage)}></Route>
       </div>
     );
   }
